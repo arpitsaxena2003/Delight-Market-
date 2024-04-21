@@ -9,7 +9,6 @@ import productRoutes from "./routes/productRoutes.js";
 import cors from "cors";
 
 //configure env
-
 dotenv.config();
 
 //database config
@@ -33,7 +32,7 @@ app.get("/", (req, res) => {
   res.send("<h1>Welcome to Delight Market</h1>");
 });
 
-//PORT
+//PORT server
 const PORT = process.env.PORT || 8080;
 
 //run listen
