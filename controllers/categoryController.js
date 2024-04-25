@@ -13,7 +13,7 @@ export const createCategoryController = async (req, res) => {
         message: "category Already Exists",
       });
     }
-const category = await new categoryModel({
+    const category = await new categoryModel({
       name,
       slug: slugify(name),
     }).save();
@@ -57,6 +57,7 @@ export const updateCategoryController = async (req, res) => {
     });
   }
 };
+
 //get all cat
 export const categoryController = async (req, res) => {
   try {
@@ -94,6 +95,7 @@ export const singleCategoryController = async (req, res) => {
     });
   }
 };
+
 //delete category
 export const deleteCategoryController = async (req, res) => {
   try {
@@ -112,8 +114,3 @@ export const deleteCategoryController = async (req, res) => {
     });
   }
 };
-
-
-
-
-    
